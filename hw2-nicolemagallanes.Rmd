@@ -3,12 +3,12 @@ title: "Homework 2"
 author: "Nicole Magallanes"
 subtitle: PSTAT 131/231
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     toc_float: yes
     code_folding: show
-  pdf_document:
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -91,18 +91,6 @@ abalone_recipe <- recipe(age~., data= abalone_train) %>%
  step_scale(all_numeric_predictors()) %>%
   step_center(all_numeric_predictors())
 abalone_recipe
-
-#abalone_recipe1 <- recipe(age~type + longest_shell +
-#                           diameter + height +
-#                           whole_weight + shucked_weight +
-#                           viscera_weight + shell_weight + 
-#                           age, data = abalone_train) %>%
-#  step_dummy(all_nominal_predictors()) %>%
-#  step_interact(terms = ~ starts_with("type"):shucked_weight +
-#                  longest_shell:diameter + shucked_weight:shell_weight) %>% 
-#  step_scale(all_numeric_predictors()) %>%
-#  step_center(all_numeric_predictors())
-#abalone_recipe1
 ```
 We do not include rings because rings to predict age because rings is already use to see the age, it is a variable that is included withing age. 
 
