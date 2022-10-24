@@ -337,17 +337,6 @@ abalone_recipe</code></pre>
 ## Interactions with starts_with(&quot;type&quot;):shucked_weight + longest_shell...
 ## Scaling for all_numeric_predictors()
 ## Centering for all_numeric_predictors()</code></pre>
-<pre class="r"><code>#abalone_recipe1 &lt;- recipe(age~type + longest_shell +
-#                           diameter + height +
-#                           whole_weight + shucked_weight +
-#                           viscera_weight + shell_weight + 
-#                           age, data = abalone_train) %&gt;%
-#  step_dummy(all_nominal_predictors()) %&gt;%
-#  step_interact(terms = ~ starts_with(&quot;type&quot;):shucked_weight +
-#                  longest_shell:diameter + shucked_weight:shell_weight) %&gt;% 
-#  step_scale(all_numeric_predictors()) %&gt;%
-#  step_center(all_numeric_predictors())
-#abalone_recipe1</code></pre>
 <p>We do not include rings because rings to predict age because rings is already use to see the age, it is a variable that is included withing age.</p>
 </div>
 <div id="question-4" class="section level3">
@@ -422,6 +411,7 @@ abalone_metrics(abalone_train_res, truth = age,
 ## 1 rmse    standard       2.15 
 ## 2 rsq     standard       0.557
 ## 3 mae     standard       1.54</code></pre>
+<p>Our R-squared value tells us that 55.73% of our variance in the dependent variable can be explained by the independent variables. The higher the R-square, usually means the better our model fits the data. In this case our R-square value is really low, meaning our model only explains 55.73% of our fitted data.</p>
 </div>
 </div>
 
