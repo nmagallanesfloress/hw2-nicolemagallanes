@@ -3,12 +3,12 @@ title: "Homework 2"
 author: "Nicole Magallanes"
 subtitle: PSTAT 131/231
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     toc_float: yes
     code_folding: show
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -92,7 +92,7 @@ abalone_recipe <- recipe(age~., data= abalone_train) %>%
   step_center(all_numeric_predictors())
 abalone_recipe
 ```
-We do not include rings because rings to predict age because rings is already use to see the age, it is a variable that is included withing age. 
+We do not include rings to predict age because rings is already used to see the age, it is a variable that is included within age. 
 
 ### Question 4
 
