@@ -156,4 +156,4 @@ abalone_metrics(abalone_train_res, truth = age,
                 estimate = .pred)
 
 ```
-
+Our R-squared value tells us that 55.73% of our variance in the dependent variable can be explained by the independent variables. The higher the R-square, usually means the better our model fits the data. In this case our R-square value is really low, meaning our model only explains 55.73% of our fitted data. 
